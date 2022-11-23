@@ -21,7 +21,7 @@ public class DriverManager extends Utils
  //method to close Browser
  public void closeBrowser()
   {
-   driver.quit();
+  driver.quit();
   }
 
 }

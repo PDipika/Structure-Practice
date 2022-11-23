@@ -8,6 +8,8 @@ public class RegisterResultPage extends  Utils{
     private By registeredMsg = By.className("result");
     //using string value for assertion
 
+
+
     static String expectedRegMsg = "Your registration completed";
     public void verifyUserHasBeenRegisteredSuccessfully()
     //getting url to confirm the user has been registered successfully by calling a method
@@ -21,5 +23,6 @@ public class RegisterResultPage extends  Utils{
         String regMsg = getTextFromElement(registeredMsg);
         //suing assert to print out the registration message in console to verify the test is passed
         Assert.assertEquals(regMsg,expectedRegMsg);
+
     }
 }

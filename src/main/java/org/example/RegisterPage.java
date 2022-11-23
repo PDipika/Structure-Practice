@@ -31,6 +31,7 @@ public class RegisterPage extends Utils{
     private By confirmPasswordField = By.id("ConfirmPassword");
     //finding a location of register submit button by id
     private By registerSubmitButton = By.id("register-button");
+    private By _continueButton = By.xpath("//a[@class=\"button-1 register-continue-button\"]");
 
     public void verifyUserIsOnRegisterPage()
     {
@@ -65,7 +66,9 @@ public class RegisterPage extends Utils{
      //using method click on element to register submit button
      clickOnElement(registerSubmitButton);
 
-
+    }
+    public void verifyUserTOClickOnContinueButton(){
+     clickOnElement(_continueButton);
     }
 }
 

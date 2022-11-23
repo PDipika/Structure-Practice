@@ -1,14 +1,33 @@
 package org.example;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 
 public class Utils extends BasePage {
+    //creating method to capture screenshot when test case fails
+    public static void captureScreenshot(String screenShotName){
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
+//Call getScreenshotAs method to create image file
+        File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+//Move image file to new destination
+        File DestFile=new File("src/ScreenShot"+screenShotName+addtime()+".jpg");
+//Copy file at destination
+        try {
+            FileUtils.copyFile(SrcFile, DestFile);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     //creating method to click on the element
     public  static void clickOnElement(By by)
     {
