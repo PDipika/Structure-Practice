@@ -44,25 +44,25 @@ public class RegisterPage extends Utils{
      //using click on element method to select gender
      clickOnElement(genderFemale);
      //using typeText method to send value to first name filed
-     typeText(firstNameField,"Dipika");
+     typeText(firstNameField,LoadProp.getProperty("firstname"));
      //using typeText method to send value to last name filed
-     typeText(lastNameField,"Patel");
+     typeText(lastNameField,LoadProp.getProperty("lastname"));
      //using method select from dropdown by value for birthday
-     selectFromDropDownByValue(dateOFBirthDaySelect, "7");
+     selectFromDropDownByValue(dateOFBirthDaySelect,LoadProp.getProperty("dateofbirth-day"));
      //using method select from dropdown by visible text for birthMonth
      selectFromDropDownByVisibleText(dateOFBirthMonthSelect,"January");
      //using method select from dropdown by value for birthYear
      selectFromDropDownByValue(dateOFBirthYearSelect,"1990");
      //using method type text to send value of  email and using timestamp method to reuse the same email
-     typeText(emailField,"pdipika0713" + addtime() +"@gmail.com");
+     typeText(emailField,LoadProp.getProperty("emailpart1") + addtime() + LoadProp.getProperty("emailpart2"));
      //using typeText method to fend value to company field
-     typeText(companynNameField,"abc.ltd");
+     typeText(companynNameField,LoadProp.getProperty("companyname"));
      //using method click on element to unTick newsletter check box
      clickOnElement(newsLetterField);
      //using method type text to send value to password field
-     typeText(passwordField,"abc123");
+     typeText(passwordField,LoadProp.getProperty("password"));
      //using method type text to send value to confirm password field
-     typeText(confirmPasswordField,"abc123");
+     typeText(confirmPasswordField,LoadProp.getProperty("confirmpassword"));
      //using method click on element to register submit button
      clickOnElement(registerSubmitButton);
 

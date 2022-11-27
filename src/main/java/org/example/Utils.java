@@ -20,7 +20,7 @@ public class Utils extends BasePage {
 //Call getScreenshotAs method to create image file
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
 //Move image file to new destination
-        File DestFile=new File("src/ScreenShot"+screenShotName+addtime()+".jpg");
+        File DestFile=new File("src/ScreenShot/"+screenShotName+addtime()+".jpg");
 //Copy file at destination
         try {
             FileUtils.copyFile(SrcFile, DestFile);

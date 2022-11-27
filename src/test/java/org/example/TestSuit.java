@@ -61,4 +61,8 @@ public class TestSuit extends BaseTest {
         electronicsPage.navigateToCameraPhoto();
         cameraAndPhotoPage.printProductsNameWithList();
     }
+    @Test
+    public void verifyAllProductsHaveAddToCartButton(){
+        cameraAndPhotoPage.addTocartButtoncheck();
+    }
 }
