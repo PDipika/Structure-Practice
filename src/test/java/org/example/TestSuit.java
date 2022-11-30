@@ -65,4 +65,13 @@ public class TestSuit extends BaseTest {
     public void verifyAllProductsHaveAddToCartButton(){
         cameraAndPhotoPage.addTocartButtoncheck();
     }
+    @Test
+    public void verifyUserShouldBeAbleToUseHoverMouseOverCategories(){
+        homePage.hoverActionOverCategory("Computers");
+    }
+    @Test
+    public void verifySearchFunctionalityIsWorking(){
+        homePage.searchBarBox();
+        nikePage.verifySearchFunctionality();
+    }
 }

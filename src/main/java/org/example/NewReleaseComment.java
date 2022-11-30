@@ -11,9 +11,9 @@ public class NewReleaseComment extends Utils {
     private By _clickOnNewCommentButton = By.className("buttons");
    public void clickOnNewCommentButton(){
        //using type text method to send value tp comment title box
-       typeText(_leaveYourCommentTitleBox,"New products");
+       typeText(_leaveYourCommentTitleBox,LoadProp.getProperty("commenttitle"));
        //using type text method to send value to leave your comment,comment box
-       typeText(_leaveYourCommentCommentBox,"Please Check Our New Products!!!");
+       typeText(_leaveYourCommentCommentBox,"commentbox");
        //using click on element method to click on new comment button
        clickOnElement(_clickOnNewCommentButton);
    }

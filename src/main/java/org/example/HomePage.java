@@ -4,11 +4,14 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomePage extends  Utils {
@@ -25,7 +28,9 @@ public class HomePage extends  Utils {
     //finding a location of currency dropdown selection by id
     private By _currencyDropdownSelection = By.id("customerCurrency");
     private By _electronics = By.xpath("//div[@class=\"item-grid\"]/div[1]/div/h2/a");
-    public void clickOnVoteButtonAndAcceptIfAlertPresent() {
+    private By _searchBox = By.id("small-searchterms");
+    private By _searchButton = By.xpath("//button[@type=\"submit\"]");
+        public void clickOnVoteButtonAndAcceptIfAlertPresent() {
         clickOnElement(_voteButton);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try
@@ -88,5 +93,23 @@ public class HomePage extends  Utils {
     }
     public void clickOnElectronics(){
         clickOnElement(_electronics);
+    }
+    public void hoverActionOverCategory(String category){
+         WebElement categoryLink = driver.findElement(By.xpath("//ul[contains(@class,\"notmobile\")]//a[contains(.,"+category+")]"));
+         String beforeHover = categoryLink.getCssValue("color");
+         System.out.println("Before hover color for category link =" + beforeHover);
+
+         Actions action = new Actions(driver);
+         Action mouseOverCategory = action.moveToElement(categoryLink).build();
+
+         mouseOverCategory.perform();
+         String afterHover = categoryLink.getCssValue("color");
+         System.out.println("After hover color for category link = " + afterHover);
+
+
+    }
+    public void searchBarBox(){
+        typeText(_searchBox,"Nike");
+        clickOnElement(_searchButton);
     }
 }

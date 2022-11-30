@@ -17,4 +17,7 @@ public class NewReleaseCommentResult extends Utils{
         //suing assert to print out the registration message in console to verify the test is passed
         Assert.assertEquals(regMsg,newsCommentMsg);
     }
+    public void verifyUserCommentIsDislayedAtBottomOfTheComments(){
+
+    }
 }

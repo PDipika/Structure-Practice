@@ -16,10 +16,10 @@ public class EmailAFriend extends Utils{
         //using click on element method to click on email a friend button
         clickOnElement(_EmailAFriend);
         //using type text method to send value to email a friend field
-        typeText(_friendEmailField,"dipika123@gmail.com");
+        typeText(_friendEmailField,LoadProp.getProperty("friendsemailforemailafriend"));
 
         // finding a location of  personal message Text box by id to Click on the personal message Text box and send value
-        typeText(_personamMessageField,"Please can you check this Product");
+        typeText(_personamMessageField,LoadProp.getProperty("messagefield"));
         // finding a location of send email button by class name to Clicks on the send email button
         clickOnElement(_sendEmailButton);
 

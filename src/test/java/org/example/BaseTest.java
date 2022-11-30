@@ -23,6 +23,7 @@ public class BaseTest extends Utils {
     NewReleaseCommentResult newReleaseCommentResult = new NewReleaseCommentResult();
     ElectronicsPage electronicsPage = new ElectronicsPage();
     CameraAndPhotoPage cameraAndPhotoPage = new CameraAndPhotoPage();
+    NikePage nikePage = new NikePage();
 
     //importing annotations before method to open browser
     @BeforeMethod

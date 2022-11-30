@@ -25,17 +25,10 @@ public class LoadProp {
     }
 
     @Test
-    public void readKeys() {
+    public void readKeys()
+    {
         System.out.println(getProperty("url"));
-        System.out.println(getProperty("firstname"));
-        System.out.println(getProperty("lastname"));
-        System.out.println(getProperty("dateofbirth-day"));
-        // System.out.println(getProperty("dateofbirth-month"));
-        // System.out.println(getProperty("dateofbirth-year"));
-        System.out.println(getProperty("emailpart1" + "emailpart2"));
-        System.out.println(getProperty("companyname"));
-        System.out.println(getProperty("password"));
-        System.out.println(getProperty("confirmpassword"));
+
     }
 
 }
