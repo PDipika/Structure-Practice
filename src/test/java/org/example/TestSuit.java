@@ -75,4 +75,5 @@ public class TestSuit extends BaseTest {
         homePage.searchBarBox();
         nikePage.verifySearchFunctionality();
     }
+
 }

@@ -8,6 +8,7 @@ public class MyStepdefs {
      HomePage homePage = new HomePage();
      RegisterPage registerPage = new RegisterPage();
      RegisterResultPage registerResultPage = new RegisterResultPage();
+
     @Given("user is on the home page")
     public void user_is_on_the_home_page() {
         // Write code here that turns the phrase above into concrete actions
@@ -37,5 +38,15 @@ public class MyStepdefs {
         // Write code here that turns the phrase above into concrete actions
         //throw new io.cucumber.java.PendingException();
         registerResultPage.verifyRegisteredMessageIsDisplayed();
+    }
+
+    @When("user click on {string}link")
+    public void userClickOnLink(String category_name) {
+        homePage.ckickOnCategoryPage(category_name);
+    }
+
+    @Then("user should be able to navigate to related {string} page successfully")
+    public void userShouldBeAbleToNavigateToRelatedPageSuccessfully(String category_link) {
+        Utils.assertCurrentURL(category_link);
     }
 }

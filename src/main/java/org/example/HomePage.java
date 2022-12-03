@@ -30,6 +30,7 @@ public class HomePage extends  Utils {
     private By _electronics = By.xpath("//div[@class=\"item-grid\"]/div[1]/div/h2/a");
     private By _searchBox = By.id("small-searchterms");
     private By _searchButton = By.xpath("//button[@type=\"submit\"]");
+
         public void clickOnVoteButtonAndAcceptIfAlertPresent() {
         clickOnElement(_voteButton);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -107,6 +108,9 @@ public class HomePage extends  Utils {
          System.out.println("After hover color for category link = " + afterHover);
 
 
+    }
+    public void ckickOnCategoryPage(String category){
+     clickOnElement(By.linkText(category));
     }
     public void searchBarBox(){
         typeText(_searchBox,"Nike");

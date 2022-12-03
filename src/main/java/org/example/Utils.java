@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +15,9 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 
 public class Utils extends BasePage {
+    public static void assertCurrentURL(String categoryName){
+        Assert.assertTrue(driver.getCurrentUrl().contains(categoryName));
+    }
     //creating method to capture screenshot when test case fails
     public static void captureScreenshot(String screenShotName){
         TakesScreenshot scrShot =((TakesScreenshot)driver);
