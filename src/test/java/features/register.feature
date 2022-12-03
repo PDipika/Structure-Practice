@@ -1,6 +1,6 @@
 Feature: register
-  As a user, user wants to register into the account
-  so that user can use account facility as registered user
+  As a user, user want to register into the account
+  @regression
   Scenario: user should be able to register successfully with valid email address
   Given user is on the home page
   When user click on the register button,user should be on register page

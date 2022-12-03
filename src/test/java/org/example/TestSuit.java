@@ -40,6 +40,7 @@ public class TestSuit extends BaseTest {
     @Test
     public void verifyFaceBookUrlOpenInNextTab(){
         homePage.clickOnFaceBookLogo();
+        facebookPage.newTab();
 
     }//test case to verify News comments has been added successfully
     @Test
